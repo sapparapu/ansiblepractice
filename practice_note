@@ -45,7 +45,12 @@ drwxrwxr-x 6 ubuntu ubuntu 4096 Nov 28 17:55 sapparapu
 drwxrwxr-x 6 ubuntu ubuntu 4096 Dec 10 00:13 AWS-Session
 -rw-rw-r-- 1 ubuntu ubuntu   14 Dec 12 16:24 inventory
 -rw-rw-r-- 1 ubuntu ubuntu    0 Dec 12 16:47 an_file
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-
+sooo,,,
+our practice_note is added to our main repo
+ubuntu@ip-172-31-23-84:~/ansiblepractice$ git add practice_note
+ubuntu@ip-172-31-23-84:~/ansiblepractice$ git commit -m "practiced commands for ansible"
+ubuntu@ip-172-31-23-84:~/ansiblepractice$ git push origin main
 
 
