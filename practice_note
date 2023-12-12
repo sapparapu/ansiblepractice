@@ -1,0 +1,51 @@
+
+  ls
+  135  ls -a
+  141  ssh-keygen   # frist we generated the keys. It's located in .ssh folder.
+	Take the id_rsa.pub key and paste it in second server of authorized keys.
+
+
+  147  cat /home/ubuntu/.ssh/id_rsa.pub
+  148 # git clone git@github.com:sapparapu/ansiblepractice.git   ###### we just cloned the repo.THen we changed to that repo.
+  149  ls
+  150  cd ansiblepractice
+  151  git status
+  152  git clone https://github.com/sapparapu/ansiblepractice.git
+  153  ls
+  154  git add README.md
+  155  git status
+  156  git commit -m "updated readmefile,initial commit"
+  157  git status
+  162  git log
+  166  git add README.md
+   167  git status
+  168  git commit -m "updated readme file,initial commit"
+  169  git push origin main ######## it  will pushes our changes to main repository
+  170  history
+  177  sudo apt update
+  178  ansible --version
+  180  sudo apt install ansible
+********************************************
+
+ubuntu@ip-172-31-23-84:~/ansiblepractice$ ansible -i inventory all -m "shell" -a "nproc"
+54.196.192.213 | CHANGED | rc=0 >>
+1
+*************************************
+
+ubuntu@ip-172-31-23-84:~/ansiblepractice$ ansible -i inventory all -m "shell" -a "touch an_file"
+o/p:
+an_file is created in second server.
+i.e.,,
+ubuntu@ip-172-31-22-65:~$ ls -ltr
+total 24
+-rwxrwxrwx 1 ubuntu ubuntu   35 Nov 28 00:37 siri
+-rwxrwxrwx 1 ubuntu ubuntu   60 Nov 28 16:39 siri1
+drwxrwxr-x 3 ubuntu ubuntu 4096 Nov 28 16:40 myfirstfolder
+drwxrwxr-x 6 ubuntu ubuntu 4096 Nov 28 17:55 sapparapu
+drwxrwxr-x 6 ubuntu ubuntu 4096 Dec 10 00:13 AWS-Session
+-rw-rw-r-- 1 ubuntu ubuntu   14 Dec 12 16:24 inventory
+-rw-rw-r-- 1 ubuntu ubuntu    0 Dec 12 16:47 an_file
+
+
+
+
