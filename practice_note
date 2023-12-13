@@ -54,3 +54,24 @@ ubuntu@ip-172-31-23-84:~/ansiblepractice$ git commit -m "practiced commands for 
 ubuntu@ip-172-31-23-84:~/ansiblepractice$ git push origin main
 
 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+ubuntu@ip-172-31-23-84:~/ansiblepractice$ ansible-playbook -i inventory first_playbook.yml
+
+PLAY [all] ***************************************************************************************************************************************************
+
+TASK [Gathering Facts] ***************************************************************************************************************************************
+ok: [54.196.192.213]
+
+TASK [install apache2 package] *******************************************************************************************************************************
+changed: [54.196.192.213]
+
+PLAY RECAP ***************************************************************************************************************************************************
+54.196.192.213             : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
+
+
+ubuntu@ip-172-31-23-84:~/ansiblepractice$ git add first_playbook1.yml
+ubuntu@ip-172-31-23-84:~/ansiblepractice$ git commit -m "2nd commit for uninstallation of apache2"
+then
+git push origin main     ---------------it will push our changes to main repo
